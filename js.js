@@ -21,7 +21,10 @@ const response={
 const getUserName=()=>{
     const APIStatus=response.status
     if(APIStatus===200){
-        const result=response.data.map((user)=>user.name)
+                // const result=response.data.map((user)=>user.name)
+
+        const result=response.data.filter((user)=>user.occupation)
+        .map((user)=>user.name)
          return result 
 
     }
